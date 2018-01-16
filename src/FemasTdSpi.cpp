@@ -60,6 +60,7 @@ FemasTdSpi::FemasTdSpi(CUstpFtdcTraderApi *tdapi) {
 	this->isNeedErrorOrderInsert = false;
 	this->test_pInputOrder = new CUstpFtdcInputOrderField();
 	this->test_pOrderAction = new CUstpFtdcOrderActionField();
+	// 飞马日志记录
 	outfile.open(Utils::getNowFileTimeName() + "_Femas.txt", ios::app);
 }
 

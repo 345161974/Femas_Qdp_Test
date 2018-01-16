@@ -7,6 +7,10 @@ Femas_Qdp_Test
 
     CentOS 6.5, gcc:v4.8.2, cmake:v2.8.12.2, lang:c++
 
+编译
+-------
+    cmake .
+    make
 
 ## 主要目录说明
 * src

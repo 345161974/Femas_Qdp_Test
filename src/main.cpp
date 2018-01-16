@@ -27,6 +27,7 @@ long long global_orderref_cal = 100000002600; // 报单引用值100000407000
 // 报单顺序调换
 #define REVERSECALL
 
+// 定时器处理函数
 void timer_handler() {
 	//printf("timer_handler()...");
 	//std::cout << "timer_handler()..." << std::endl;
@@ -193,21 +194,15 @@ int main() {
 	qdp_tdspi->InitTestpInputOrder(const_cast<char *>(Test_InstrumentID.c_str()), '0', '0', 1, Test_Price, Utils::longlongtostr(qdp_tdspi->generate_orderref()));
 	qdp_tdspi->InitTestpOrderAction("SHFE");
 
-	
 
-
-	// 创建定时器
+	// 创建定时器(注册定时器处理函数)
 	Timer tHello(timer_handler);
-	// 开启定时器
+	// 定时器是否为单次定时器
 	tHello.setSingleShot(false);
-	// tHello.setInterval(Timer::Interval(1000 * 60 * 10));
+	// 定时器间隔
 	tHello.setInterval(Timer::Interval(500));
-	//tHello.start(true);
-
-
-	//sleep(2);
-	//femas_tdspi->Login("9999", "", "");
-	//femas_tdspi->Login("9999", "", "");
+	// 启动定时器
+	tHello.start(true);
 
 	/**
 	实盘

@@ -60,6 +60,7 @@ QdpTdSpi::QdpTdSpi(CQdpFtdcTraderApi *tdapi) {
 	this->isNeedErrorOrderInsert = false;
 	this->test_pInputOrder = new CQdpFtdcInputOrderField();
 	this->test_pOrderAction = new CQdpFtdcOrderActionField();
+	// 量投日志记录
 	outfile.open(Utils::getNowFileTimeName() + "_Qdp.txt", ios::app);
 }
 
