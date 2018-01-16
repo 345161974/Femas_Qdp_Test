@@ -1,0 +1,1 @@
+/usr/local/bin/g++    -std=c++0x -liconv -D_GLIBCXX_USE_NANOSLEEP   CMakeFiles/quant_ctp_trade.dir/main.cpp.o CMakeFiles/quant_ctp_trade.dir/FemasTdSpi.cpp.o CMakeFiles/quant_ctp_trade.dir/QdpTdSpi.cpp.o CMakeFiles/quant_ctp_trade.dir/Utils.cpp.o CMakeFiles/quant_ctp_trade.dir/Timer.cpp.o  -o quant_ctp_trade -rdynamic -lUSTPtraderapiAF -lqdptraderapi 
